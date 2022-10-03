@@ -21,7 +21,7 @@ function BotsPage() {
       setBotInfo={setBotInfo} />
       
       <BotCollection
-      botInfo={botInfo}
+      bots={botInfo}
       setBotArmy={setBotArmy}
       botArmy={botArmy}
       setBotInfo={setBotInfo} />
