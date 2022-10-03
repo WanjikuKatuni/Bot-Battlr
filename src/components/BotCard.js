@@ -27,7 +27,7 @@ function BotCard({ bot, botArmy, setBotArmy, setBotInfo }) {
     .then(response => response.json())
     .then(()=>{
       setBotArmy((army)=> army.filter((botArm) => botArm.id !== bot.id));
-      alert('Ro-BOT deleted')
+      alert('Do you want to delete bot??')
     })
   }
   return (
