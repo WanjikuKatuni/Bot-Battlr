@@ -19,6 +19,17 @@ function BotCard({ bot, botArmy, setBotArmy, setBotInfo }) {
       setBotArmy(army => [...army, bot])
     }
   }
+  function handleDelete(){
+    fetch(`http://localhost:8002/bots/${bot.id}`, {
+      method: "DELETE",
+
+    })
+    .then(response => response.json())
+    .then(()=>{
+      setBotArmy((army)=> army.filter((botArm) => botArm.id !== bot.id));
+      alert('Ro-BOT deleted')
+    })
+  }
   return (
     <div className="ui column">
       <div
@@ -55,9 +66,7 @@ function BotCard({ bot, botArmy, setBotArmy, setBotInfo }) {
             <div className="ui center aligned segment basic">
               <button
                 className="ui mini red button"
-                onClick={() =>
-                  console.log("add code to connect event listener")
-                }
+                onClick={handleDelete}
               >
                 x
               </button>
