@@ -9,6 +9,7 @@ function YourBotArmy({botArmy, setBotArmy}) {
     <div className="ui segment inverted olive bot-army">
       <div className="ui five column grid">
         <div className="row bot-army-row">
+          Your Bot Army
           {/*...and here...*/}
           {botArmy.map((bot)=>
           <BotCard key={bot.id}
